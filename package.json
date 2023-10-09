@@ -1,10 +1,10 @@
 {
   "name": "pinut",
-  "version": "0.0.1",
-  "description": "Un bot discord qui ce voudras être random",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ."
   },
   "repository": {
     "type": "git",
@@ -12,8 +12,9 @@
   },
   "author": "Farfad3ts",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Farfad3ts/Pinut/issues"
-  },
-  "homepage": "https://github.com/Farfad3ts/Pinut#readme"
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  }
 }
