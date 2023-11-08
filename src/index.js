@@ -1,4 +1,5 @@
-const {Client, IntentsBitField} = require('discord.js')
+const {Client, IntentsBitField, GuildEmoji, Emoji} = require('discord.js');
+const { Line3 } = require('three');
 require("dotenv").config()
 const client = new Client({
     intents : [
@@ -20,6 +21,11 @@ client.on("interactionCreate", interation =>{
         interation.reply("Hey!");
     if(interation.commandName === "ping")
         interation.reply(`Pong took ${Math.abs(Date.now() - interation.createdTimestamp)}ms api latency is ${client.ws.ping}ms`)
+    if(interation.commandName == "addition"){
+        const number1 = interation.options.get('premiernombre').value
+        const number2 = interation.options.get('deuxiemenombre').value
+        interation.reply(`${number1} + ${number2} = ${number1 + number2}`)
+    }
 
 })
 

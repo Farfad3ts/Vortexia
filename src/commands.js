@@ -11,13 +11,20 @@ const commands = [
         description : "pong"
     },
     {
-        name: "Addition",
+        name: "addition",
         description: "Additionez 2 nombres",
         options:[
             {
-                name: "first-number",
+                name: "premiernombre",
                 description:"The first number",
-                type: ApplicationCommandOptionType.Number
+                type: ApplicationCommandOptionType.Number,
+                required: true
+            },
+            {
+                name: "deuxiemenombre",
+                description : "The second number",
+                type : ApplicationCommandOptionType.Number,
+                required : true
             }
         ]
     }
@@ -37,7 +44,7 @@ const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
             { body: commands }
 
         )
-                console.log("Bleep Bleep")
+        console.log("Bleep Bleep")
     } catch (error) {
         console.log(error)
     }
